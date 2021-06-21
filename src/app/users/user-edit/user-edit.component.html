@@ -1,0 +1,118 @@
+<div *ngIf="user">
+    <h2>{{title}}</h2>
+
+    <div>
+        <div class="row">
+            <div class="col-sm-3">
+            </div>
+            <div class="col-sm-9">
+                <form #frmUser="ngForm" id="frmUser" novalidate (ngSubmit)="onSaveUser()" novalidate>
+                    <div class="row">
+                        <label class="control-label col-sm-3" for="txtName">Name:</label>
+                        <div class="col-sm-5">
+                            <input id="txtName"
+                                   type="text"
+                                   class="form-control"
+                                   [(ngModel)]="user.name"
+                                   title="Name"
+                                   placeholder="Enter a name ..." [ngModelOptions]="{standalone: true}"
+                            />
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <label class="control-label col-sm-3" for="txtUserName">UserName:</label>
+                        <div class="col-sm-5">
+                            <input id="txtUserName"
+                                   type="text"
+                                   class="form-control"
+                                   [(ngModel)]="user.username"
+                                   title="UserName"
+                                   placeholder="Enter  username ..." [ngModelOptions]="{standalone: true}"
+                            />
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <label class="control-label col-sm-3" for="txtPhone">Phone:</label>
+                        <div class="col-sm-5">
+                            <input id="txtPhone"
+                                   type="text"
+                                   class="form-control"
+                                   [(ngModel)]="user.phone"
+                                   title="phone"
+                                   placeholder="Enter  phone ..." [ngModelOptions]="{standalone: true}"
+                            />
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <label class="control-label col-sm-3" for="txtEmail">Email:</label>
+                        <div class="col-sm-5">
+                            <input id="txtEmail"
+                                   type="text"
+                                   class="form-control"
+                                   [(ngModel)]="user.email"
+                                   title="email"
+                                   placeholder="Enter  Email ..." [ngModelOptions]="{standalone: true}"
+                            />
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <label class="control-label col-sm-3" for="txtWebsite">Website:</label>
+                        <div class="col-sm-5">
+                            <input id="txtWebsite"
+                                   type="text"
+                                   class="form-control"
+                                   [(ngModel)]="user.website"
+                                   title="website"
+                                   placeholder="Enter  Website ..." [ngModelOptions]="{standalone: true}"
+                            />
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <label class="control-label col-sm-3" for="txtCompany">Company:</label>
+                        <div class="col-sm-5">
+                            <input id="txtCompany"
+                                   type="text"
+                                   class="form-control"
+                                   [(ngModel)]="user.company.name"
+                                   title="company"
+                                   placeholder="Enter  Company Name ..." [ngModelOptions]="{standalone: true}"
+                            />
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <label class="control-label col-sm-3" for="txtAdd">Address:</label>
+                        <div class="col-sm-5">
+              <textarea id="txtAdd"
+                        rows="15"
+                        class="form-control"
+                        [(ngModel)]="user.address.city"
+                        title="Name"
+                        placeholder="Enter Address ..." [ngModelOptions]="{standalone: true}"
+              ></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary">Save user</button>&nbsp;&nbsp;
+                        <div class="btn-group">
+                            <button type="button" (click)="onBack()" class="btn btn-secondary btn-sm">
+                                <i class="fa fa-arrow-left"></i> Cancel
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
